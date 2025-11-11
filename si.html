@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>¡Dijiste que sí! — ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <audio src="Coldplay - Sparks [Letra En Español].mp3" autoplay></audio>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="page-si">
+  <!-- Música romántica suave (autoplay puede ser bloqueado en algunos navegadores).
+       Tiene controles ocultos visualmente pero accesibles; el usuario puede pausar. -->
+  <audio id="bg-music-si" autoplay loop>
+    <source src="Coldplay - Sparks [Letra En Español].mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <header class="site-header">
+    <div class="logo">TE AMO!!</div>
+  </header>
+
+  <main class="container">
+    <section class="celebration">
+      <h1 class="title">¡Sí! ❤️</h1>
+      <p class="subtitle">Gracias por decir que sí mi vida hermosa. Esto es solo un nuevo comienzo de todo lo hermoso que viene estoy tan contento gracias por hacerme el hombre mas feliz del mundo.</p>
+
+      <!-- Foto grande de la pareja -->
+      <div class="hero-photo">
+        <img src="ultima salida beso.jpg" alt="Foto nuestra">
+      </div>
+
+      <!-- Mensaje romántico -->
+      <article class="love-message">
+        <p>
+          Mi amor, cada día a tu lado será los mejores dias de mi vida. Prometo escucharte, cuidarte y esforzarme y dar todo de mi para hacerte feliz y para hacerte sonreír y poder ver esa sonriza que me encanta.
+          Contigo quiero construir una vida, una casa, una familia, todo contigo y gracias por decirme que si y darme ese privilegio de ser tu novio TE AMO!!
+        </p>
+      </article>
+
+      <!-- Corazones flotando (decoración animada) -->
+      <div class="floating-hearts" aria-hidden="true">
+        <span class="heart h1">❤</span>
+        <span class="heart h2">💗</span>
+        <span class="heart h3">💞</span>
+        <span class="heart h4">💓</span>
+        <span class="heart h5">💟</span>
+      </div>
+
+      <!-- Acción final -->
+      <nav class="actions">
+        <a class="btn btn-primary" href="https://wa.me/qr/LWCAOQKOAT36O1">ENVIAME TU RESPUESTA PULSANDO AQUI <3</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Hecho con cariño — Miguel Gimenez</small>
+  </footer>
+
+  <script>
+    // Intento de reproducir audio en navegadores que bloquean autoplay: un pequeño manejo para permitir reproducción al primer click.
+    (function() {
+      const audio = document.getElementById('bg-music-si');
+      function unlock() {
+        audio.play().catch(() => {});
+        window.removeEventListener('click', unlock);
+        window.removeEventListener('keydown', unlock);
+      }
+      window.addEventListener('click', unlock);
+      window.addEventListener('keydown', unlock);
+    })();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oh… — auch mi corazoncito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <audio src="I Know You so Well.mp3" autoplay></audio>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="page-no">
+  <!-- Música triste suave (instrumental) -->
+  <audio id="bg-music-no" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/12/audio_9d8f58f6d9.mp3?filename=sad-piano-11089.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <header class="site-header">
+    <div class="logo">NOOO AMOOOR</div>
+  </header>
+
+  <main class="container">
+    <section class="gentle-sad">
+      <h1 class="title">PORQUE MI AMOR?</h1>
+      <p class="subtitle">Yo no soportaria estar sin ti mi amor es algo imposible ya no veo un mundo ni una vida sin ti, ya nada tendria sentido para mi sos mi todo mi vida entera y lo que mas deseo en esta vida es estar contigo ;c.</p>
+
+      <div class="hero-photo">
+        <img src="gatito triste 1.jpg" alt="Imagen melancólica" class="sad-img">
+      </div>
+
+      <article class="gentle-note">
+        <p>
+          porfa si esto no sirvio dejame intentar de otras formas no quiero perderte, no quiero estar lejos de vos no quiero una vida sin vos por favor mi vida yo te amo y lo que mas deseo es estar contigo ;c.
+        </p>
+      </article>
+      <nav class="actions">
+        <!-- En lugar de insistir, damos un cierre respetuoso y un enlace a 'gracias' que es un mensaje poético -->
+        <a class="btn btn-ghost" href="si.html">Si, quiero </a>
+        <a class="btn btn-ghost" href="gracias.html">Ya te dije que no :c </a>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Hecho con cariño — Miguel Gimenez</small>
+  </footer>
+
+  <script>
+    // Intento de reproducir audio si el navegador bloquea autoplay
+    (function() {
+      const audio = document.getElementById('bg-music-no');
+      function unlock() {
+        audio.play().catch(() => {});
+        window.removeEventListener('click', unlock);
+        window.removeEventListener('keydown', unlock);
+      }
+      window.addEventListener('click', unlock);
+      window.addEventListener('keydown', unlock);
+    })();
+  </script>
+</body>
+</html>
